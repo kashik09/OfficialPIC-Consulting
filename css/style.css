@@ -181,13 +181,13 @@ p {
 
 footer {
     padding: 20px 0;
-    color: white;
+    color: #92d14f;
     background-color: #0c6ba1;
     text-align: center;
+    font-weight: 700;
 }
 
 footer.text-center a {
     color: #fd7400;
-    font-weight: 700;
     text-decoration: none;
 }
