@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #0c6ba1;
 }
 
+h1.contact, h2.contact {
+    font-weight: 575;
+}
+
 #team-members {
     font-weight: 650;
 }
@@ -145,6 +149,19 @@ p {
     background-color: #fd7400;
 }
 
+.btn-submit {
+    background-color: #92d14f;
+    border-color: #92d14f;
+    font-weight: 700;
+    color: white;
+}
+.btn-submit:hover {
+    background-color: #fd7400;
+    border-color: #fd7400;
+    color: white;
+}
+
+
 .services-section {
     padding: 60px 0;
     background-color: #e6f3f9;
@@ -183,8 +200,8 @@ footer {
     padding: 20px 0;
     color: #92d14f;
     background-color: #0c6ba1;
-    text-align: center;
     font-weight: 700;
+    text-align: center;
 }
 
 footer.text-center a {
