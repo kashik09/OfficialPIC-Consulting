@@ -118,9 +118,22 @@ p {
 }
 
 .contact-link a:hover {
-    color: #92d14f;
+    color: #fd7400;
     cursor: pointer;
 }
+
+.contact-link {
+    font-size: 1.1rem;
+    font-weight: 452;
+    padding-top: 0;
+}
+
+.contact-heading {
+    font-size: 1.5rem;
+    font-weight: 550;
+    margin-bottom: 0;
+    padding-bottom: 0.1rem !important;
+} 
 
 .btn-primary {
     background-color: #0c6ba1;
@@ -190,6 +203,24 @@ p {
 
 .contact-section-text {
     size: 1.12rem;
+}
+
+.contact-info-box {
+    background-color: #0c6aa1d7;
+    border-radius: 8px;
+    color: white;
+    padding: 20px;
+}
+
+.contact-info-header {
+    border: none;
+    background-color: #92d14f;
+    font-size: 1.4rem;
+    font-weight: 650;
+}
+
+.focus-ring {
+    --bs-focus-ring-color: rgba(12, 107, 161, 0.5);
 }
 
 #country-code {
