@@ -239,3 +239,8 @@ footer.text-center a {
     color: #fd7400;
     text-decoration: none;
 }
+
+footer.text-center a:hover {
+    color: #fd7400;
+    text-decoration: underline 0.12rem;
+}
