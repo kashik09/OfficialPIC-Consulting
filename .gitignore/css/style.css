@@ -94,13 +94,15 @@ p {
     font-weight: 645;
 }
 
-.hero-section .btn-primary {
+.hero-section .btn-primary, .contact-section .btn-secondary {
     background-color: #0c6ba1;
+    font-weight: 650;
     border-color: #0c6ba1;
 }
 
-.hero-section .btn-primary:hover {
+.hero-section .btn-primary:hover, .contact-section .btn-secondary:hover {
     color: #0c6ba1;
+    font-weight: 650;
     background-color: #fd7400;
     border-color: #fd7400;
 }
@@ -119,23 +121,27 @@ p {
 .btn-primary {
     background-color: #0c6ba1;
     color: white;
+    font-weight: 650;
     border-color: #0c6ba1;
 }
 
 .btn-primary:hover {
     background-color: #fd7400;
     color: white;
+    font-weight: 650;
     border-color: #fd7400;
 }
 
 .btn-secondary {
     background-color: #92d14f;
     color: white;
+    font-weight: 550;
     border-color: #92d14f;
 }
 
 .btn-secondary:hover {
     border-color: #fd7400;
+    font-weight: 550;
     background-color: #fd7400;
 }
 
@@ -167,10 +173,6 @@ p {
 
 .contact-section-text {
     size: 1.12rem;
-}
-
-.contact-section .btn-secondary {
-    background-color: #0c6ba1;
 }
 
 #country-code {
