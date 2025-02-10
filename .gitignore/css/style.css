@@ -5,11 +5,11 @@
 
 body {
     color: #1E1E1E;
-    background-color: #F4F7FC;
+    background-color: #e6f3f9;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #5271FF;
+    color: #0c6ba1;
 }
 
 #team-members {
@@ -23,7 +23,7 @@ p {
 
 .navbar {
     padding: 10px 20px;
-    background-color: #2A2E45;
+    background-color: #0c6ba1;
     font-size: 1.12rem;
 }
 
@@ -38,12 +38,12 @@ p {
 
 .navbar .nav-link {
     font-weight: 500;
-    color: #F4F7FC !important;
+    color: #e6f3f9 !important;
 }    
 
 .navbar .nav-link.active, 
 .navbar .nav-link:hover {
-    color: #FFC857 !important;
+    color: #92d14f !important;
 }    
 
 .navbar-brand img {
@@ -52,7 +52,7 @@ p {
 }
 
 .offcanvas {
-    background-color: #2A2E45;
+    background-color: #0c6ba1;
 }
 
 .offcanvas .nav-link {
@@ -68,7 +68,7 @@ p {
 }
 
 .offcanvas .btn-close {
-    background-color: #FFC857 !important;
+    background-color: #92d14f !important;
     display: flex;
     width: 35px;
     height: 35px;
@@ -80,29 +80,29 @@ p {
 
 .hero-section {
     padding: 60px 0;
-    background-color: #6DC5D1;
+    background-color: #92d14f;
     text-align: center;
 }
 
 .hero-section h1 {
     font-size: 2.5rem;
-    color: #2A2E45;
+    color: #0c6ba1;
 }
 
 .hero-section p, .contact-section-text {
-    color: #F4F7FC;
+    color: #e6f3f9;
     font-weight: 645;
 }
 
 .hero-section .btn-primary {
-    background-color: #5271FF;
-    border-color: #5271FF;
+    background-color: #0c6ba1;
+    border-color: #0c6ba1;
 }
 
 .hero-section .btn-primary:hover {
-    color: #2A2E45;
-    background-color: #FFC857;
-    border-color: #FFC857;
+    color: #0c6ba1;
+    background-color: #fd7400;
+    border-color: #fd7400;
 }
 
 .contact-link a {
@@ -112,36 +112,36 @@ p {
 }
 
 .contact-link a:hover {
-    color: #5271FF;
+    color: #92d14f;
     cursor: pointer;
 }
 
 .btn-primary {
-    background-color: #5271FF;
+    background-color: #0c6ba1;
     color: white;
-    border-color: #5271FF;
+    border-color: #0c6ba1;
 }
 
 .btn-primary:hover {
-    background-color: #FFC857;
-    color: #2A2E45;
-    border-color: #FFC857;
+    background-color: #fd7400;
+    color: white;
+    border-color: #fd7400;
 }
 
 .btn-secondary {
-    background-color: #2A2E45;
+    background-color: #92d14f;
     color: white;
-    border-color: #2A2E45;
+    border-color: #92d14f;
 }
 
 .btn-secondary:hover {
-    border-color: #6DC5D1;
-    background-color: #6DC5D1;
+    border-color: #fd7400;
+    background-color: #fd7400;
 }
 
 .services-section {
     padding: 60px 0;
-    background-color: #F4F7FC;
+    background-color: #e6f3f9;
 }
 
 .services-section .card {
@@ -156,13 +156,13 @@ p {
 }
 
 .contact-section {
-    background-color: #6DC5D1;
+    background-color: #92d14f;
     padding: 50px 0;
     text-align: center;
 }
 
 .contact-section-header {
-    color: #2A2E45;
+    color: #0c6ba1;
 }
 
 .contact-section-text {
@@ -170,7 +170,7 @@ p {
 }
 
 .contact-section .btn-secondary {
-    background-color: #2A2E45;
+    background-color: #0c6ba1;
 }
 
 #country-code {
@@ -180,6 +180,12 @@ p {
 footer {
     padding: 20px 0;
     color: white;
-    background-color: #2A2E45;
+    background-color: #0c6ba1;
     text-align: center;
+}
+
+footer.text-center a {
+    color: #fd7400;
+    font-weight: 700;
+    text-decoration: none;
 }
