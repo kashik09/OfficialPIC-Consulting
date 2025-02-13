@@ -111,6 +111,12 @@ p {
     border-color: #92d14f;
 }
 
+img.placeholder {
+    width: 35rem;
+    height: 30rem;
+    color: #1E1E1E;
+}
+
 .contact-link a {
     text-decoration: none;
     color: inherit;
