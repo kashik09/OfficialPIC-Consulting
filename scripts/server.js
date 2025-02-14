@@ -1,36 +1,51 @@
+// Load environment variables from .env file (ensures database credentials are secure)
 require("dotenv").config({ path: "../.env" });
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const FormSubmission = require("../models/formSubmission");
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+const express = require("express"); // Import Express framework for handling HTTP requests
+const mongoose = require("mongoose"); // Import Mongoose for MongoDB interaction
+const cors = require("cors"); // Import CORS to allow cross-origin requests
+const bodyParser = require("body-parser"); // Import Body-Parser to parse JSON data from requests
+const FormSubmission = require("../models/formSubmission"); // Import the Mongoose model for form submissions
 
-app.use(cors());
-app.use(bodyParser.json());
+const app = express(); // Initialize Express app
+const PORT = process.env.PORT || 5000; // Set the server port, using environment variable or default to 5000
 
+// Middleware Setup
+app.use(cors()); // Enable Cross-Origin Resource Sharing (CORS) to allow frontend to communicate with backend
+app.use(bodyParser.json()); // Parse incoming JSON request bodies
+
+// Connect to MongoDB using Mongoose
 mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => console.log("Connected to MongoDB"))
-  .catch(err => console.log("MongoDB Connection Error:", err));
+    useNewUrlParser: true, // Use the new MongoDB URL parser
+    useUnifiedTopology: true, // Use the new server discovery & monitoring engine
+})
+.then(() => console.log("Connected to MongoDB")) // Log success message when connected
+.catch(err => console.log("MongoDB Connection Error:", err)); // Log error if connection fails
 
+// API Route to Handle Form Submission (POST Request)
 app.post("/submit-form", async (req, res) => {
+    // Extract name, email, and message from the request body
     const { name, email, message } = req.body;
 
+    // Validate that all required fields are present
     if (!name || !email || !message) {
-        return res.status(400).json({ error: "All fields are required."});
+        return res.status(400).json({ error: "All fields are required." });
     }
 
     try {
-        const newSubmission = new formSubmission({ name, email, message});
+        // Create a new form submission instance
+        const newSubmission = new FormSubmission({ name, email, message });
+
+        // Save the submission to MongoDB
         await newSubmission.save();
-        res.json({ success: "Form submitted successfully!"});
+
+        // Respond with success message
+        res.json({ success: "Form submitted successfully!" });
     } catch (error) {
-        res.status(500).json({ error: "Server error, try again later."});
+        // Handle server errors
+        res.status(500).json({ error: "Server error, try again later." });
     }
 });
 
+// Start the server and listen for incoming requests on the specified port
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
