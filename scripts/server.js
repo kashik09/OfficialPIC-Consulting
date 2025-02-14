@@ -29,7 +29,7 @@ app.post("/submit-form", async (req, res) => {
 
     // Validate that all required fields are present
     if (!name || !email || !message) {
-        return res.status(400).json({ error: "All fields are required." });
+        return res.redirect("/400.html"); // Redirect to a custom 400 error page
     }
 
     try {
@@ -42,8 +42,8 @@ app.post("/submit-form", async (req, res) => {
         // Respond with success message
         res.json({ success: "Form submitted successfully!" });
     } catch (error) {
-        // Handle server errors
-        res.status(500).json({ error: "Server error, try again later." });
+        // Redirect to a custom 500 error page on server error
+        res.redirect("/500.html");
     }
 });
 
