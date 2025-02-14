@@ -227,6 +227,7 @@ img.placeholder {
 
 .focus-ring {
     --bs-focus-ring-color: rgba(12, 107, 161, 0.5);
+    border: #0c6ba1;
 }
 
 #country-code {
