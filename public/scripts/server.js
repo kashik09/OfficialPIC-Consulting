@@ -5,7 +5,7 @@ const express = require("express"); // Import Express framework for handling HTT
 const mongoose = require("mongoose"); // Import Mongoose for MongoDB interaction
 const cors = require("cors"); // Import CORS to allow cross-origin requests
 const bodyParser = require("body-parser"); // Import Body-Parser to parse JSON data from requests
-const FormSubmission = require("../models/formSubmission"); // Import the Mongoose model for form submissions
+const formSubmission = require("../../models/formSubmission"); // Import the Mongoose model for form submissions
 
 const app = express(); // Initialize Express app
 const PORT = process.env.PORT || 5000; // Set the server port, using environment variable or default to 5000
@@ -34,7 +34,7 @@ app.post("/submit-form", async (req, res) => {
 
     try {
         // Create a new form submission instance
-        const newSubmission = new FormSubmission({ name, email, message });
+        const newSubmission = new formSubmission({ name, email, message });
 
         // Save the submission to MongoDB
         await newSubmission.save();
