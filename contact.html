@@ -65,17 +65,17 @@
         <div class="row">
             <div class="col-md-8">
                 <h2 class="mb-2">Contact Us</h2>
-                <form id="contactForm">
+                <form id="contactForm" action="/submit-form" method="POST">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="form-floating">
-                                <input type="text" class="form-control focus-ring" id="floatingFirstName" placeholder="First Name" minlength="2" required>
+                                <input type="text" class="form-control focus-ring" id="floatingFirstName" name="firstName" placeholder="First Name" minlength="2" required>
                                 <label for="floatingFirstName">First Name</label>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-floating">
-                                <input type="text" class="form-control focus-ring" id="floatingLastName" placeholder="Last Name" minlength="2" required>
+                                <input type="text" class="form-control focus-ring" id="floatingLastName" name="lastName" placeholder="Last Name" minlength="2" required>
                                 <label for="floatingLastName">Last Name</label>
                             </div>
                         </div>
@@ -92,13 +92,13 @@
                             <label for="countryCode">Country Code</label>
                         </div>
                         <div class="form-floating flex-grow-1">
-                            <input type="tel" class="form-control focus-ring" id="floatingPhone" placeholder="Phone Number" minlength="7" maxlength="10" required>
+                            <input type="tel" pattern="[0-9]{7,10}" class="form-control focus-ring" id="floatingPhone" placeholder="Phone Number" required>
                             <label for="floatingPhone">Phone Number</label>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-floating">
-                            <input type="email" class="form-control focus-ring" id="floatingEmail" placeholder="Email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required>
+                            <input type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" class="form-control focus-ring" id="floatingEmail" placeholder="Email" required>
                             <label for="floatingEmail">Email</label>
                         </div>
                     </div>
