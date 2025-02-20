@@ -69,13 +69,13 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="form-floating">
-                                <input type="text" class="form-control focus-ring" id="floatingFirstName" name="firstName" placeholder="First Name" minlength="2" required>
+                                <input type="text" class="form-control focus-ring" id="floatingFirstName" name="floatingFirstName" placeholder="First Name" minlength="2" required>
                                 <label for="floatingFirstName">First Name</label>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-floating">
-                                <input type="text" class="form-control focus-ring" id="floatingLastName" name="lastName" placeholder="Last Name" minlength="2" required>
+                                <input type="text" class="form-control focus-ring" id="floatingLastName" name="floatingLastName" placeholder="Last Name" minlength="2" required>
                                 <label for="floatingLastName">Last Name</label>
                             </div>
                         </div>
@@ -92,13 +92,13 @@
                             <label for="countryCode">Country Code</label>
                         </div>
                         <div class="form-floating flex-grow-1">
-                            <input type="tel" pattern="[0-9]{7,10}" class="form-control focus-ring" id="floatingPhone" placeholder="Phone Number" required>
+                            <input type="tel" pattern="[0-9]{7,10}" class="form-control focus-ring" id="floatingPhone" name="floatingPhone" placeholder="Phone Number" required>
                             <label for="floatingPhone">Phone Number</label>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-floating">
-                            <input type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" class="form-control focus-ring" id="floatingEmail" placeholder="Email" required>
+                            <input type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" class="form-control focus-ring" name="floatingEmail" id="floatingEmail" placeholder="Email" required>
                             <label for="floatingEmail">Email</label>
                         </div>
                     </div>
@@ -132,6 +132,12 @@
                 </div>
             </div>
         </div>
+        <div id="toastContainer" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMessage"></div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>        
     </main>
     <footer class="text-center py-3 mt-5">
         &copy; 2025 <a href="#kk" rel="noopener noreferrer" target="_blank">kashiCoding</a>. All rights reserved.

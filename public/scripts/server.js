@@ -1,5 +1,5 @@
 // Load environment variables from .env file (ensures database credentials are secure)
-require("dotenv").config({ path: "../.env" });
+require("dotenv").config();
 
 const express = require("express"); // Import Express framework for handling HTTP requests
 const mongoose = require("mongoose"); // Import Mongoose for MongoDB interaction
@@ -22,30 +22,35 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log("Connected to MongoDB")) // Log success message when connected
 .catch(err => console.log("MongoDB Connection Error:", err)); // Log error if connection fails
 
-// API Route to Handle Form Submission (POST Request)
-app.post("/submit-form", async (req, res) => {
-    // Extract name, email, and message from the request body
-    const { name, email, message } = req.body;
+const { body, validationResult } = require("express-validator");
+const path = require("path"); // Required to resolve file paths
 
-    // Validate that all required fields are present
-    if (!name || !email || !message) {
-        return res.redirect("/400.html"); // Redirect to a custom 400 error page
+app.post(
+  "/submit-form",
+  [
+    body("floatingFirstName").trim().notEmpty().withMessage("First Name is required."),
+    body("floatingLastName").trim().notEmpty().withMessage("Last Name is required."),    
+    body("email").isEmail().withMessage("Enter a valid email address."),
+    body("message").trim().notEmpty().withMessage("Message cannot be empty."),
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      // Redirect to your custom error page instead of returning JSON
+      return res.status(400).json({ errors: errors.array().map(err => err.msg) });
     }
 
     try {
-        // Create a new form submission instance
-        const newSubmission = new FormSubmission({ name, email, message });
+      const { name, email, message } = req.body;
+      const newSubmission = new FormSubmission({ name, email, message });
+      await newSubmission.save();
 
-        // Save the submission to MongoDB
-        await newSubmission.save();
-
-        // Respond with success message
-        res.json({ success: "Form submitted successfully!" });
+      res.json({ success: "Form submitted successfully!" }); // Adjust as needed
     } catch (error) {
-        // Redirect to a custom 500 error page on server error
-        res.redirect("/500.html");
+      return res.status(500).json({ errors: errors.array().map(err => err.msg) });
     }
-});
-
+  }
+);
+  
 // Start the server and listen for incoming requests on the specified port
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
