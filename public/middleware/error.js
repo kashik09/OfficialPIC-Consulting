@@ -26,26 +26,29 @@ document.getElementById("contactForm").addEventListener("submit", async function
     }
 
     if (errors.length > 0) {
-        showToast(data.errors?.join("<br>") || "Something went wrong.");
-        // Show validation errors in a toast
+        showToast(errors.join("<br>"));
         return;
+        
     }
 
     try {
+        let jsonData = {};
+        formData.forEach((value, key) => jsonData[key] = value);
+        
         let response = await fetch(form.action, {
             method: form.method,
-            body: JSON.stringify(Object.fromEntries(formData)),
+            body: JSON.stringify(jsonData),
             headers: { "Content-Type": "application/json" }
-        });
+        });        
 
         let data = await response.json();
 
         if (!response.ok) {
-            showToast(data.errors.join("<br>")); // Show server-side validation errors
+            showToast(data.errors ? data.errors.join("<br>") : "Oops! Something went wrong. Please try again.");
         } else {
             showToast(data.success, true); // Show success toast
-            form.reset(); // Clear form on success
-        }
+            setTimeout(() => form.reset(), 1500);
+        }        
     } catch (error) {
         showToast("Network error. Please try again later.");
     }
@@ -61,4 +64,6 @@ function showToast(message, success = false) {
     toastMessage.innerHTML = message;
     let toast = new bootstrap.Toast(toastElement);
     toast.show();
+
+    setTimeout(() => toast.hide(), 10000); // Auto-hide after 10 seconds
 }
