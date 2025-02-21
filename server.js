@@ -3,21 +3,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const path = require("path");
+
 const formRoutes = require("./routes/formRoutes"); // ✅ Import form routes
 const errorHandler = require("./middleware/errorHandler"); // ✅ Import error handler
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
-const path = require("path");
-
-// Serve 404.html for missing routes
-app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(__dirname, "404.html"));
-});
-
-// Use global error handler (updated version)
-app.use(errorHandler);
 
 // Middleware
 app.use(cors());
@@ -33,14 +24,12 @@ mongoose.connect(process.env.MONGO_URI, {
 
 app.use("/api", formRoutes);
 
-// 404 Not Found Handler
-app.use((req, res, next) => {
-    const error = new Error("Resource Not Found");
-    error.status = 404;
-    next(error);
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
 
 // ✅ Use Global Error Handler
 app.use(errorHandler);
 
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
