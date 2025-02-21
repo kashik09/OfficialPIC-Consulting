@@ -28,7 +28,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
     if (errors.length > 0) {
         showToast(errors.join("<br>"));
         return;
-        
     }
 
     try {
@@ -44,7 +43,12 @@ document.getElementById("contactForm").addEventListener("submit", async function
         let data = await response.json();
 
         if (!response.ok) {
-            showToast(data.errors ? data.errors.join("<br>") : "Oops! Something went wrong. Please try again.");
+            // ✅ Only show toasts for client errors (errorType: "client")
+            if (data.errorType === "client") {
+                showToast(data.errors ? data.errors.join("<br>") : "Invalid input.");
+            } else {
+                console.error("Server error:", data.message); // ✅ Log server errors, don't show them as toasts
+            }
         } else {
             showToast(data.success, true); // Show success toast
             setTimeout(() => form.reset(), 1500);
