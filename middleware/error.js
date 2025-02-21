@@ -43,12 +43,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
         let data = await response.json();
 
         if (!response.ok) {
-            // ✅ Only show toasts for client errors (errorType: "client")
-            if (data.errorType === "client") {
-                showToast(data.errors ? data.errors.join("<br>") : "Invalid input.");
-            } else {
-                console.error("Server error:", data.message); // ✅ Log server errors, don't show them as toasts
-            }
+            showToast(data.message || "Something went wrong.");
         } else {
             showToast(data.success, true); // Show success toast
             setTimeout(() => form.reset(), 1500);
