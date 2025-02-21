@@ -9,12 +9,15 @@ const errorHandler = require("./middleware/errorHandler"); // ✅ Import error h
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const path = require("path"); // Required for file paths
+const path = require("path");
 
-// 404 Not Found Handler (Serve a proper HTML page)
-app.use((req, res) => {
+// Serve 404.html for missing routes
+app.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
+
+// Use global error handler (updated version)
+app.use(errorHandler);
 
 // Middleware
 app.use(cors());

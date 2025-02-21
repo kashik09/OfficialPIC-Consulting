@@ -1,11 +1,21 @@
+const path = require("path");
+
 module.exports = (err, req, res, next) => {
-    console.error(`[ERROR]: ${err.message}`);
+    console.error(`[ERROR ${err.status || 500}]: ${err.message}`);
 
     const statusCode = err.status || 500;
-    
-    res.status(statusCode).json({
-        errorType: statusCode >= 500 ? "server" : "client",
+
+    // Only serve 404 and 500 error pages
+    if (statusCode === 404) {
+        return res.status(404).sendFile(path.join(__dirname, "404.html"));
+    } 
+    if (statusCode >= 500) {
+        return res.status(500).sendFile(path.join(__dirname, "500.html"));
+    }
+
+    // For all other errors, just send JSON (to be handled by toasts)
+    return res.status(statusCode).json({
         success: false,
-        message: err.message || "Something went wrong. Please try again later.",
+        message: err.message || "An unexpected error occurred.",
     });
 };
