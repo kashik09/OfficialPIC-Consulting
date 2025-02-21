@@ -47,8 +47,8 @@ app.post(
 
       res.json({ success: "Form submitted successfully!" }); // Adjust as needed
     } catch (error) {
-      return res.status(500).json({ errors: errors.array().map(err => err.msg) });
-    }
+      next(error); // Forward error to global handler
+  }
   }
 );
   
