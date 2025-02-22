@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("#contactForm");
+    if (form) {
+        form.addEventListener("submit", (event) => {
+            console.log("Form submitted!");
+        });
+    }
+
     const emailInput = document.getElementById("floatingEmail");
     const promoCheck = document.getElementById("promoCheck");
     const phoneInputField = document.querySelector("#floatingPhone");
@@ -9,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     promoCheck.checked = localStorage.getItem("promo") === "true";
 
     phoneInputField.addEventListener("input", () => {
-        localStorage.setItem("phone", phoneInput.getNumber());
+        localStorage.setItem("phone", phoneInputField.value);
     });
 
     emailInput.addEventListener("input", () => {
