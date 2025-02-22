@@ -13,20 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const phoneInput = window.intlTelInput(phoneInputField, {
         preferredCountries: [
             "ke", // Kenya 🇰🇪
-            "ug", // Uganda 🇺🇬
-            "tz", // Tanzania 🇹🇿
-            "rw", // Rwanda 🇷🇼
-            "bi", // Burundi 🇧🇮
-            "so", // Somalia 🇸🇴
-            "et", // Ethiopia 🇪🇹
-            "cd", // DR Congo 🇨🇩
             "us", // United States 🇺🇸
             "gb", // United Kingdom 🇬🇧
             "au", // Australia 🇦🇺
-            "ca", // Canada 🇨🇦
-            "in", // India 🇮🇳 (Commonly used internationally)
-            "za", // South Africa 🇿🇦
-            "ng"  // Nigeria 🇳🇬
+            "ug", // Uganda 🇺🇬
+            "tz", // Tanzania 🇹🇿
+            "rw", // Rwanda 🇷🇼
+            "et", // Ethiopia 🇪🇹
         ],
         separateDialCode: true, 
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
