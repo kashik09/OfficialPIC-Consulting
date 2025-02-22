@@ -48,9 +48,10 @@ document.getElementById("contactForm").addEventListener("submit", async function
             showToast(data.success, true); // Show success toast
             setTimeout(() => form.reset(), 1500);
         }        
-    } catch (error) {
+    } catch (_error) {
+        console.error("Network error:", _error);
         showToast("Network error. Please try again later.");
-    }
+    }    
 });
 
 function showToast(message, success = false) {
