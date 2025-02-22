@@ -1,21 +1,21 @@
 export default [
   {
+    files: ["**/*.js"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "commonjs",
-    },
-    env: {
-      node: true,
-      browser: true,
-    },
-    globals: {
-      bootstrap: "readonly",
+      globals: {
+        __dirname: "readonly",
+        process: "readonly",
+        bootstrap: "readonly",
+        console: "readonly",
+      },
     },
     rules: {
-      "no-unused-vars": ["warn", { "vars": "all", "args": "none" }],
-      "no-undef": "off",
+      "no-unused-vars": ["warn", { vars: "all", args: "none" }],
       "eqeqeq": "error",
       "no-console": "off",
+      "no-undef": "off",
     },
   },
 ];
