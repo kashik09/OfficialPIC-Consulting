@@ -64,8 +64,8 @@
         <h1 class="contact">Get in Touch</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae natus fuga minima dicta, ab, incidunt praesentium iure totam eum veritatis assumenda reiciendis minus, maiores pariatur eius aliquam?</p>
         <div class="row">
+            <h2 class="mb-2">Contact Us</h2>
             <div class="col-md-8">
-                <h2 class="mb-2">Contact Us</h2>
                 <form id="contactForm" action="/submit-form" method="POST">
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -93,6 +93,12 @@
                             <label for="floatingEmail">Email</label>
                         </div>
                     </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <textarea class="form-control focus-ring" name="message" id="floatingMessage" placeholder="Your message" required></textarea>
+                            <label for="floatingMessage">Your Message</label>
+                        </div>
+                    </div>                    
                     <div class="form-check mb-3">
                         <input type="checkbox" class="form-check-input" id="promoCheck">
                         <label class="form-check-label" for="promoCheck"> I want to receive updates and insights from Phantom Impact Consulting.</label>
