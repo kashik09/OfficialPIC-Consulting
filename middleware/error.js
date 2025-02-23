@@ -43,7 +43,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
         let data = await response.json();
 
         if (!response.ok) {
-            showToast(data.message || "Something went wrong.");
+            showToast(data.errors ? data.errors.join("<br>") : data.message || "Something went wrong.");
         } else {
             showToast(data.success, true); // Show success toast
             setTimeout(() => form.reset(), 1500);
