@@ -16,6 +16,6 @@ module.exports = (err, req, res, next) => {
     // For all other errors, just send JSON (to be handled by toasts)
     return res.status(statusCode).json({
         success: false,
-        message: err.message || "An unexpected error occurred.",
+        erorss: [err.message || "An unexpected error occurred."]
     });
 };
