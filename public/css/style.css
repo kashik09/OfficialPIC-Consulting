@@ -27,7 +27,7 @@ p {
 
 .navbar {
     padding: 10px 20px;
-    background-color: white;
+    background-color: #212529;
     font-size: 1.12rem;
 }
 
@@ -42,7 +42,7 @@ p {
 
 .navbar .nav-link {
     font-weight: 500;
-    color: black !important;
+    color: white !important;
 }    
 
 .navbar .nav-link.active, 
@@ -51,12 +51,12 @@ p {
 }    
 
 .navbar-brand img {
-    height: 3rem;
+    height: 3.5rem;
     width: auto;
 }
 
 .offcanvas {
-    background-color: white;
+    background-color: #212529;
 }
 
 .offcanvas .nav-link {
