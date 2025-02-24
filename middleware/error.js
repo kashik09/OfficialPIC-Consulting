@@ -58,12 +58,17 @@ function showToast(message, success = false) {
     let toastElement = document.getElementById("toastContainer");
     let toastMessage = document.getElementById("toastMessage");
 
-    toastElement.classList.remove("bg-danger", "bg-success");
+    toastElement.classList.remove("bg-danger", "bg-success", "show");
     toastElement.classList.add(success ? "bg-success" : "bg-danger");
 
     toastMessage.innerHTML = message;
-    let toast = new bootstrap.Toast(toastElement);
+    
+    let toast = new bootstrap.Toast(toastElement, { delay: 10000 });
+    toastElement.style.display = "block";
     toast.show();
 
-    setTimeout(() => toast.hide(), 10000); // Auto-hide after 10 seconds
+    setTimeout(() => {
+        toast.hide();
+        toastElement.style.display = "none";
+    }, 10000);
 }
