@@ -11,8 +11,8 @@ exports.submitForm = async (req, res, next) => {
     }
 
     try {
-        const { floatingFirstName, floatingLastName, email, message } = req.body;
-        const newSubmission = new FormSubmission({ floatingFirstName, floatingLastName, email, message });
+        const { floatingFirstName, floatingLastName, floatingPhone, email, message } = req.body;
+        const newSubmission = new FormSubmission({ floatingFirstName, floatingLastName, floatingPhone, email, message });        
         await newSubmission.save();
 
         res.json({ success: "Form submitted successfully!" });

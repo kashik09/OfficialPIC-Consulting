@@ -234,6 +234,13 @@ img.placeholder {
     max-width: 13rem;
 }
 
+#toastContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
 footer {
     padding: 20px 0;
     color: #92d14f;

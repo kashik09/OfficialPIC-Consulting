@@ -45,7 +45,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
         if (!response.ok) {
             showToast(data.errors ? data.errors.join("<br>") : data.message || "Something went wrong.");
         } else {
-            showToast(data.success, true); // Show success toast
+            showToast("✅ Thank you! Your form has been submitted successfully.", true); // Show success toast
             setTimeout(() => form.reset(), 1500);
         }        
     } catch (_error) {
