@@ -34,8 +34,8 @@ document.getElementById("contactForm").addEventListener("submit", async function
         let jsonData = {};
         formData.forEach((value, key) => jsonData[key] = value);
         
-        let response = await fetch(form.action, {
-            method: form.method,
+        let response = await fetch("/api/submit-form", {  // ✅ Ensures correct API call
+            method: "POST",
             body: JSON.stringify(jsonData),
             headers: { "Content-Type": "application/json" }
         });        
