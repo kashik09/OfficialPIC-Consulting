@@ -1,8 +1,3 @@
-.card-img-top {
-    object-fit: cover;
-    height: 27rem;
-}
-
 body {
     background-color: #e6f3f9;
 }
@@ -13,6 +8,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1.contact, h2.contact {
     font-weight: 575;
+}
+
+.thematic {
+    color: white;
 }
 
 #team-members {
@@ -118,30 +117,6 @@ img.rounded {
     width: 35rem;
 }
 
-.contact-link a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease-in-out;
-}
-
-.contact-link a:hover {
-    color: #fd7400;
-    cursor: pointer;
-}
-
-.contact-link {
-    font-size: 1.1rem;
-    font-weight: 452;
-    padding-top: 0;
-}
-
-.contact-heading {
-    font-size: 1.5rem;
-    font-weight: 550;
-    margin-bottom: 0;
-    padding-bottom: 0.1rem !important;
-} 
-
 .btn-primary {
     background-color: #0c6ba1;
     color: white;
@@ -198,6 +173,30 @@ img.rounded {
     transform: translateY(-5px);
 }
 
+.contact-link a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-link a:hover {
+    color: #fd7400;
+    cursor: pointer;
+}
+
+.contact-link {
+    font-size: 1.1rem;
+    font-weight: 452;
+    padding-top: 0;
+}
+
+.contact-heading {
+    font-size: 1.5rem;
+    font-weight: 550;
+    margin-bottom: 0;
+    padding-bottom: 0.1rem !important;
+}
+
 .contact-section {
     background-color: #0c6ba1;
     padding: 50px 0;
@@ -224,6 +223,10 @@ img.rounded {
     background-color: #92d14f;
     font-size: 1.4rem;
     font-weight: 650;
+}
+
+.sm {
+    padding: 1.8rem 0;
 }
 
 .focus-ring {
