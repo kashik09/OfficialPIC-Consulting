@@ -114,10 +114,8 @@ p {
     border: none;
 }
 
-img.placeholder {
+img.rounded {
     width: 35rem;
-    height: 30rem;
-    color: #1E1E1E;
 }
 
 .contact-link a {
