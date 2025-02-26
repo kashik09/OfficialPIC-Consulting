@@ -23,6 +23,14 @@ p {
     font-size: 1rem;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
+.about {
+    font-size: 1.1rem;
+}
+
 .navbar {
     padding: 10px 20px;
     background-color: #e6f3f9;
@@ -39,6 +47,7 @@ p {
 }
 
 .navbar .nav-link {
+    font-size: 1.25rem;
     font-weight: 900;
     color: #0c6ba1 !important;
 }    
