@@ -10,6 +10,10 @@ h1.contact, h2.contact {
     font-weight: 575;
 }
 
+.bg-thematic {
+    background-color: #0c6ba1;
+}
+
 .thematic {
     color: white;
 }
@@ -164,11 +168,6 @@ img.rounded {
     background-color: #fd7400;
     border: none;
     color: white;
-}
-
-.services-section {
-    padding: 60px 0;
-    background-color: #e6f3f9;
 }
 
 .services-section .card {
