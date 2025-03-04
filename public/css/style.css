@@ -31,7 +31,7 @@ p {
     text-align: justify;
 }
 
-.about {
+.font-size-big {
     font-size: 1.1rem;
 }
 
@@ -123,6 +123,19 @@ p {
     color: white;
     font-weight: 650;
     background-color: #92d14f;
+    border: none;
+}
+
+.services-section .btn-secondary {
+    background-color: #92d14f;
+    font-weight: 650;
+    border: none;
+}
+
+.services-section .btn-secondary:hover {
+    color: white;
+    font-weight: 650;
+    background-color: #fd7400;
     border: none;
 }
 
