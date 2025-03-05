@@ -183,14 +183,14 @@ img.rounded {
     color: white;
 }
 
-.card {
+.card-services {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.card-body {
+.card-body_services {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,11 +198,11 @@ img.rounded {
     padding: 30px;
 }
 
-.card-title {
+.card-title_services {
     margin-bottom: 15px;
 }
 
-.card-text {
+.card-text_services {
     flex-grow: 1;
 }
 
