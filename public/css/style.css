@@ -143,6 +143,11 @@ img.rounded {
     width: 35rem;
 }
 
+img.placeholder {
+    height: 12rem;
+    width: 13rem;
+}
+
 .btn-primary {
     background-color: #0c6ba1;
     color: white;
