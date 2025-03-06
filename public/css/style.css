@@ -98,7 +98,6 @@ p {
 }
 
 .hero-section {
-    padding: 60px 0;
     background-color: #0c6ba1;
     text-align: center;
 }
@@ -243,7 +242,6 @@ img.rounded {
 
 .contact-section {
     background-color: #0c6ba1;
-    padding: 50px 0;
     text-align: center;
 }
 
@@ -295,7 +293,6 @@ img.rounded {
 }
 
 footer {
-    padding: 20px 0;
     color: #92d14f;
     background-color: #0c6ba1;
     font-weight: 700;
