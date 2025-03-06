@@ -98,6 +98,7 @@ p {
 }
 
 .hero-section {
+    margin-top: 1rem;
     background-color: #0c6ba1;
     text-align: center;
 }
