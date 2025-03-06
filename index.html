@@ -123,72 +123,118 @@
         </section>
         <section class="pt-3 pb-5">
             <div class="container">
-              <h2 class="fw-bold mb-4 text-center">Latest Articles</h2>
-              <div class="row justify-content-center mb-4">
-                <div class="col-md-9 d-flex flex-column align-items-center text-justify">
-                  <p class="text-justify mb-3 font-size-big">
-                    Stay informed with insights from our latest research, policy analysis, and development strategies.
-                  </p>
-                </div>
-              </div>
-              <!-- Article Cards -->
-              <div class="row g-4">
-                <!-- Article 1 -->
-                <div class="col-md-6">
-                  <div class="card h-100 shadow-sm text-center">
-                    <div class="card-body">
-                      <h5 class="card-title">Market and Social Research</h5>
-                      <p class="card-text">Explore how data-driven insights support impactful programming.</p>
-                      <a href="#" class="btn btn-secondary mt-2" data-bs-toggle="modal" data-bs-target="#articleModal1">Read More</a>
+                <h2 class="fw-bold mb-4 text-center">Latest Articles</h2>
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-9 d-flex flex-column align-items-center text-justify">
+                        <p class="text-justify mb-3 font-size-big">Stay informed with insights from our latest research, policy analysis, and development strategies.</p>
                     </div>
-                  </div>
                 </div>
-                <!-- Article 2 -->
-                <div class="col-md-6">
-                  <div class="card h-100 shadow-sm text-center">
-                    <div class="card-body">
-                      <h5 class="card-title">Policy Development</h5>
-                      <p class="card-text">Crafting evidence-based policies that drive sustainable solutions.</p>
-                      <a href="#" class="btn btn-secondary mt-2" data-bs-toggle="modal" data-bs-target="#articleModal2">Read More</a>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-8 p-4">
+                                    <h5 class="card-title">Market and Social Research</h5>
+                                    <p class="card-text">Explore how data-driven insights support impactful programming.</p>
+                                    <a href="#" class="btn btn-secondary mt-2" data-bs-toggle="modal" data-bs-target="#articleModal1">Read More</a>
+                                </div>
+                                    <div class="col-4">
+                                    <img src="thumbnail1.jpg" class="img-fluid rounded-end" alt="Article Thumbnail">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-8 p-4">
+                                    <h5 class="card-title">Policy Development</h5>
+                                    <p class="card-text">Crafting evidence-based policies that drive sustainable solutions.</p>
+                                    <a href="#" class="btn btn-secondary mt-2" data-bs-toggle="modal" data-bs-target="#articleModal2">Read More</a>
+                                </div>
+                                <div class="col-4">
+                                    <img src="thumbnail2.jpg" class="img-fluid rounded-end" alt="Article Thumbnail">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </section>
-          <!-- Modals -->
-          <!-- Modal 1 -->
-          <div class="modal fade" id="articleModal1" tabindex="-1" aria-labelledby="articleModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="articleModal1Label">Market and Social Research</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </section>
+        <div class="modal fade" id="articleModal1" tabindex="-1" aria-labelledby="articleModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="author-avatar.jpg" alt="Author" class="rounded-circle me-2" width="30" height="30">
+                            <span class="fw-bold">Jane Doe</span>
+                        </div>
+                    <h5 class="modal-title mx-auto" id="articleModal1Label">Market and Social Research</h5>
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-link me-2"><i class="bi bi-share"></i></button>
+                        <button type="button" class="btn btn-link me-2"><i class="bi bi-chat-dots"></i></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  <p>
-                    At PIC, we deliver high-quality market and social research to inform strategic decision-making...
-                  </p>
+                    <div class="modal-body">
+                            <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, vel! <span class="fw-bold">Excepturi minima voluptatem eveniet</span> natus vel, incidunt porro esse et provident, aliquam dolores corrupti laborum quae. <span class="fw-bold">Itaque quod quae quisquam?</span></p>
+                            <div class="mt-4">
+                                <h6>Comments</h6>
+                                <p><span class="fw-bold">Alex:</span> Love how policy work is being highlighted here!</p>
+                                <textarea class="form-control mt-2" placeholder="Add a comment..."></textarea>
+                                <button class="btn btn-primary mt-2">Post Comment</button>
+                            </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button class="btn" data-bs-toggle="modal" data-bs-dismiss="modal">
+                            <i class="bi bi-arrow-left"></i>
+                        </button>
+                        <button class="btn btn-outline-secondary" data-bs-target="#articleModal2" data-bs-toggle="modal" data-bs-dismiss="modal">
+                            Next <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Modal 2 -->
-          <div class="modal fade" id="articleModal2" tabindex="-1" aria-labelledby="articleModal2Label" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="articleModal2Label">Policy Development</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>  
+        <div class="modal fade" id="articleModal2" tabindex="-1" aria-labelledby="articleModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="author-avatar.jpg" alt="Author" class="rounded-circle me-2" width="30" height="30">
+                            <span class="fw-bold">Jane Doe</span>
+                        </div>
+                        <h5 class="modal-title mx-auto" id="articleModal2Label">Policy Development</h5>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-link me-2">
+                                <i class="bi bi-share"></i>
+                            </button>
+                            <button type="button" class="btn btn-link me-2">
+                                <i class="bi bi-chat-dots"></i>
+                            </button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-justify">Lorem ipsum dolor, sit amet <span class="fw-bold">consectetur adipisicing</span> elit. Quos neque eligendi rerum nulla incidunt aut adipisci quas exercitationem <span class="fw-bold">perferendis reiciendis</span> minus optio a eaque, <span class="fw-bold">voluptate reprehenderit mollitia</span> error magnam! Sit.</p>
+                        <div class="mt-4">
+                            <h6>Comments</h6>
+                            <p><strong>Alex:</strong> Love how policy work is being highlighted here!</p>
+                            <textarea class="form-control mt-2" placeholder="Add a comment..."></textarea>
+                            <button class="btn btn-primary mt-2">Post Comment</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button class="btn btn-outline-secondary" data-bs-target="#articleModal1" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-left"></i> Previous
+                        </button>
+                        <!-- <button class="btn btn-outline-secondary" data-bs-target="#articleModal3" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        Next <i class="bi bi-arrow-right"></i>
+                        </button> -->
+                    </div>
                 </div>
-                <div class="modal-body">
-                  <p>
-                    We support governments, NGOs, and international organizations to craft, review, and analyze policies...
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>                            
+        </div>                                    
         <section class="contact-section rounded py-4">
             <div class="container text-center">
                 <h2 class="contact-section-header fw-bold mb-3 mt-2">Get in Touch</h2>
