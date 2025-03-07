@@ -32,7 +32,7 @@ h1.contact, h2.contact {
 }
 
 #expertiseCarousel .carousel-item {
-    min-height: 7.75rem;
+    min-height: 8.2rem;
 }
 
 #expertiseCarousel {
@@ -52,11 +52,9 @@ h1.contact, h2.contact {
 }
 
 #expertiseCarousel .carousel-indicators {
-    left: 50%;
+    left: 50.21%;
     transform: translateX(-50%);
     margin: 0; 
-    justify-content: center;
-    position: absolute;
 }
 
 .carousel-indicators [data-bs-target] {
