@@ -216,6 +216,10 @@ img.placeholder {
     color: white;
 }
 
+.card-blue:hover, .card-green:hover {
+    background-color: #fd7400 !important;
+}
+
 .card-services {
     height: 100%;
     display: flex;
