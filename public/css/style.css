@@ -23,47 +23,6 @@ h1.contact, h2.contact {
     font-weight: 575;
 }
 
-.bg-thematic {
-    background-color: #0c6ba1;
-}
-
-.thematic {
-    color: white;
-}
-
-#expertiseCarousel .carousel-item {
-    min-height: 8.2rem;
-}
-
-#expertiseCarousel {
-    position: relative;
-    padding: 0 3rem;
-}
-
-#expertiseCarousel .carousel-control-prev,
-#expertiseCarousel .carousel-control-next {
-    width: 3rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#expertiseCarousel .carousel-inner {
-    padding: 1rem 2rem;
-}
-
-#expertiseCarousel .carousel-indicators {
-    left: 50.21%;
-    transform: translateX(-50%);
-    margin: 0; 
-}
-
-.carousel-indicators [data-bs-target] {
-    background-color: #0c6ba1;
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-}
-
 /* #team-members {
     font-weight: 650;
 } */
@@ -321,6 +280,47 @@ img.placeholder {
 
 .sm {
     padding: 1.8rem 0;
+}
+
+.bg-thematic {
+    background-color: #0c6ba1;
+}
+
+.thematic {
+    color: white;
+}
+
+#expertiseCarousel .carousel-item {
+    min-height: 8.2rem;
+}
+
+#expertiseCarousel {
+    position: relative;
+    padding: 0 3rem;
+}
+
+#expertiseCarousel .carousel-control-prev,
+#expertiseCarousel .carousel-control-next {
+    width: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#expertiseCarousel .carousel-inner {
+    padding: 1rem 2rem;
+}
+
+#expertiseCarousel .carousel-indicators {
+    left: 50.21%;
+    transform: translateX(-50%);
+    margin: 0; 
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #0c6ba1;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
 }
 
 .focus-ring {
