@@ -217,8 +217,6 @@ img.placeholder {
 }
 
 .card-services {
-    /* background-color: #0c6ba1 !important;
-    color: white; */
     height: 100%;
     display: flex;
     flex-direction: column;
