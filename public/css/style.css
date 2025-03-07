@@ -40,6 +40,14 @@ p {
     font-size: 1.1rem;
 }
 
+.font-size-bigger {
+    font-size: larger;
+}
+
+.fw-contact {
+    font-weight: 455;
+}
+
 .navbar {
     padding: 10px 20px;
     background-color: #e6f3f9;
