@@ -31,9 +31,44 @@ h1.contact, h2.contact {
     color: white;
 }
 
-#team-members {
-    font-weight: 650;
+#expertiseCarousel .carousel-item {
+    min-height: 7.75rem;
 }
+
+#expertiseCarousel {
+    position: relative;
+    padding: 0 3rem;
+}
+
+#expertiseCarousel .carousel-control-prev,
+#expertiseCarousel .carousel-control-next {
+    width: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#expertiseCarousel .carousel-inner {
+    padding: 1rem 2rem;
+}
+
+#expertiseCarousel .carousel-indicators {
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0; 
+    justify-content: center;
+    position: absolute;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #0c6ba1;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+}
+
+/* #team-members {
+    font-weight: 650;
+} */
 
 p {
     line-height: 1.6;
