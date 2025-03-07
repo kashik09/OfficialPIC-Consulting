@@ -306,6 +306,13 @@ img.placeholder {
     font-weight: 650;
 }
 
+.contact-img {
+    max-width: 100%;
+    max-height: 400px; /* Adjust this to match your form height */
+    object-fit: contain;
+    margin-top: -5.7rem;
+}
+
 .sm {
     padding: 1.8rem 0;
 }
