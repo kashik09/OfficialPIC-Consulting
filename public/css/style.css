@@ -218,6 +218,7 @@ img.placeholder {
 
 .card-blue:hover, .card-green:hover {
     background-color: #fd7400 !important;
+    transition: background-color 5s ease-in-out, color 5s ease-in-out;
 }
 
 .card-services {
