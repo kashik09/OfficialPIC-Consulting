@@ -202,6 +202,8 @@ img.placeholder {
 }
 
 .card-services {
+    background-color: #0c6ba1 !important;
+    color: white;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -218,10 +220,13 @@ img.placeholder {
 
 .card-title_services {
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .card-text_services {
     flex-grow: 1;
+    font-weight: 455;
+    font-size: 1.08rem;
 }
 
 .services-section .card {
