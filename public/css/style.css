@@ -112,6 +112,7 @@ p {
 
 .hero-section {
     margin-top: 1rem;
+    height: 25rem;
     background-color: #0c6ba1;
     text-align: center;
 }
@@ -152,8 +153,27 @@ p {
     border: none;
 }
 
-img.rounded {
+img.rounded-map {
     width: 35rem;
+}
+
+img.rounded-carousel {
+    height: 17.34rem;
+    width: auto;
+}
+
+#heroCarousel {
+    max-height: 35rem; 
+    margin: auto;
+}
+
+#heroCarousel .carousel-item {
+    min-height: 20rem;
+}
+
+.carousel-caption {
+    bottom: 0.3125rem;
+    font-size: 0.85rem;
 }
 
 img.placeholder {
