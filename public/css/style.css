@@ -216,7 +216,7 @@ img.placeholder {
     color: white;
 }
 
-.card-blue:hover, .card-green:hover {
+.card-orange:hover, .card-blue:hover, .card-green:hover {
     background-color: #fd7400 !important;
     transition: background-color 5s ease-in-out, color 5s ease-in-out;
 }
