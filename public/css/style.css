@@ -333,6 +333,15 @@ img.placeholder {
     margin-top: -5.7rem;
 }
 
+.contact-caption {
+    margin-top: -2.7rem;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
 .sm {
     padding: 1.8rem 0;
 }
