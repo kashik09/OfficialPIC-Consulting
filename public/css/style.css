@@ -291,7 +291,7 @@ img.placeholder {
     text-align: center;
     transition: transform 0.6s, height 0.6s ease-in-out;
     transform-style: preserve-3d;
-    min-height: 150px; /* Ensure the card has a reasonable starting size */
+    min-height: 150px;
 }
 
 .flip-card.flipped .flip-card-inner {
@@ -322,7 +322,7 @@ img.placeholder {
 }
 
 .flip-card.flipped .flip-card-inner {
-    height: auto !important; /* Expands the card dynamically when flipped */
+    height: auto !important;
 }
 
 .flip-card .card-title_services {
