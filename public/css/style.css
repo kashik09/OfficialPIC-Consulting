@@ -279,6 +279,62 @@ img.placeholder {
     font-size: 1.08rem;
 }
 
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    width: 100%;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.6s, height 0.6s ease-in-out;
+    transform-style: preserve-3d;
+    min-height: 150px; /* Ensure the card has a reasonable starting size */
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: height 0.6s ease-in-out;
+}
+
+.flip-card-front {
+    z-index: 2;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+}
+
+.flip-card.flipped .flip-card-inner {
+    height: auto !important; /* Expands the card dynamically when flipped */
+}
+
+.flip-card .card-title_services {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.flip-card .card-text_services {
+    font-size: 1rem;
+    text-align: center;
+}
+
 .services-section .card {
     background-color: white;
     border: none;

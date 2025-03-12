@@ -1,3 +1,26 @@
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', function (event) {
+            event.stopPropagation();
+            this.classList.toggle('flipped');
+
+            let front = this.querySelector('.flip-card-front');
+            let back = this.querySelector('.flip-card-back');
+            let cardInner = this.querySelector('.flip-card-inner');
+
+            if (this.classList.contains('flipped')) {
+                // Expand to fit content
+                let backHeight = back.scrollHeight;
+                cardInner.style.height = backHeight + "px";
+            } else {
+                // Shrink to original size
+                let frontHeight = front.scrollHeight;
+                cardInner.style.height = frontHeight + "px";
+            }
+        });
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("#contactForm");
     if (form) {
