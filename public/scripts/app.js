@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.flip-card').forEach(card => {
-        card.addEventListener('click', function (event) {
-            event.stopPropagation();
+        let cardInner = card.querySelector('.flip-card-inner');
+        let front = card.querySelector('.flip-card-front');
+        let back = card.querySelector('.flip-card-back');
+
+        // Set initial height based on front content
+        cardInner.style.height = front.scrollHeight + "px";
+
+        card.addEventListener('click', function () {
             this.classList.toggle('flipped');
 
-            let front = this.querySelector('.flip-card-front');
-            let back = this.querySelector('.flip-card-back');
-            let cardInner = this.querySelector('.flip-card-inner');
-
             if (this.classList.contains('flipped')) {
-                // Expand to fit content
-                let backHeight = back.scrollHeight;
-                cardInner.style.height = backHeight + "px";
+                // Expand to fit back content
+                cardInner.style.height = back.scrollHeight + "px";
             } else {
-                // Shrink to original size
-                let frontHeight = front.scrollHeight;
-                cardInner.style.height = frontHeight + "px";
+                // Shrink back to fit front content
+                cardInner.style.height = front.scrollHeight + "px";
             }
         });
     });
