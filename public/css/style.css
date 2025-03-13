@@ -325,6 +325,12 @@ img.placeholder {
     color: white;
 }
 
+.card-green:hover .flip-button {
+    background-color: #92d14f;
+    font-weight: 750;
+    color: white;
+}
+
 .flip-button:hover {
     opacity: 0.85;
     transform: scale(1.05);
