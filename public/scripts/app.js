@@ -36,6 +36,22 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', setMaxHeight);
 });
 
+if ('ontouchstart' in window || navigator.maxTouchPoints) {
+    let styleSheets = document.styleSheets;
+    for (let i = 0; i < styleSheets.length; i++) {
+        try {
+            let rules = styleSheets[i].cssRules || styleSheets[i].rules;
+            for (let j = rules.length - 1; j >= 0; j--) {
+                if (rules[j].selectorText && rules[j].selectorText.includes(':hover')) {
+                    styleSheets[i].deleteRule(j);
+                }
+            }
+        } catch (e) {
+            console.warn("Could not access stylesheet: ", e);
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("#contactForm");
     if (form) {
