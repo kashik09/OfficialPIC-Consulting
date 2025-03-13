@@ -1,24 +1,39 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.flip-card').forEach(card => {
-        let cardInner = card.querySelector('.flip-card-inner');
-        let front = card.querySelector('.flip-card-front');
-        let back = card.querySelector('.flip-card-back');
+    const flipCards = document.querySelectorAll('.flip-card');
 
-        // Set initial height based on front content
-        cardInner.style.height = front.scrollHeight + "px";
+    function setMaxHeight() {
+        let maxHeight = 0;
 
-        card.addEventListener('click', function () {
-            this.classList.toggle('flipped');
+        flipCards.forEach(card => {
+            let front = card.querySelector('.flip-card-front');
+            let back = card.querySelector('.flip-card-back');
+            let cardInner = card.querySelector('.flip-card-inner');
 
-            if (this.classList.contains('flipped')) {
-                // Expand to fit back content
-                cardInner.style.height = back.scrollHeight + "px";
-            } else {
-                // Shrink back to fit front content
-                cardInner.style.height = front.scrollHeight + "px";
+            let cardHeight = Math.max(front.scrollHeight, back.scrollHeight);
+            if (cardHeight > maxHeight) {
+                maxHeight = cardHeight;
             }
         });
+
+        flipCards.forEach(card => {
+            let cardInner = card.querySelector('.flip-card-inner');
+            cardInner.style.minHeight = maxHeight + "px";
+        });
+    }
+
+    flipCards.forEach(card => {
+        let flipButtons = card.querySelectorAll('.flip-button');
+
+        flipButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                card.classList.toggle('flipped');
+            });
+        });
     });
+
+    // Set max height on load & when window resizes
+    setMaxHeight();
+    window.addEventListener('resize', setMaxHeight);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
