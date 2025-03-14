@@ -1,23 +1,36 @@
 document.addEventListener('DOMContentLoaded', function () {
     const flipCards = document.querySelectorAll('.flip-card');
 
-    function setMaxHeight() {
-        let maxHeight = 0;
+    function adjustHeight(card) {
+        const front = card.querySelector('.flip-card-front');
+        const back = card.querySelector('.flip-card-back');
+        const cardInner = card.querySelector('.flip-card-inner');
 
-        flipCards.forEach(card => {
-            let front = card.querySelector('.flip-card-front');
-            let back = card.querySelector('.flip-card-back');
-            let cardInner = card.querySelector('.flip-card-inner');
+        // Get current height before flipping
+        const currentHeight = card.offsetHeight;
 
-            let cardHeight = Math.max(front.scrollHeight, back.scrollHeight);
-            if (cardHeight > maxHeight) {
-                maxHeight = cardHeight;
+        // Temporarily fix the height before changing it
+        card.style.height = `${currentHeight}px`;
+        card.style.transition = 'height 0.5s ease-in-out';
+
+        // Allow browser to process height before flipping
+        requestAnimationFrame(() => {
+            card.classList.toggle('flipped');
+
+            // Get new height based on the active side
+            const newHeight = card.classList.contains('flipped') 
+                ? back.scrollHeight 
+                : front.scrollHeight;
+
+            // Only update height if necessary
+            if (newHeight !== currentHeight) {
+                card.style.height = `${newHeight}px`;
             }
-        });
 
-        flipCards.forEach(card => {
-            let cardInner = card.querySelector('.flip-card-inner');
-            cardInner.style.minHeight = maxHeight + "px";
+            // Remove fixed height after transition for flexibility
+            setTimeout(() => {
+                card.style.height = 'auto';
+            }, 500);
         });
     }
 
@@ -26,14 +39,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
         flipButtons.forEach(button => {
             button.addEventListener('click', function () {
-                card.classList.toggle('flipped');
+                adjustHeight(card);
             });
         });
     });
 
-    // Set max height on load & when window resizes
-    setMaxHeight();
-    window.addEventListener('resize', setMaxHeight);
+    // Adjust height on window resize if necessary
+    window.addEventListener('resize', () => {
+        flipCards.forEach(card => {
+            if (card.classList.contains('flipped')) {
+                adjustHeight(card);
+            }
+        });
+    });
 });
 
 if ('ontouchstart' in window || navigator.maxTouchPoints) {
