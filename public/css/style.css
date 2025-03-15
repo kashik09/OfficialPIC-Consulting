@@ -328,6 +328,7 @@ img.placeholder {
 .flip-card-back {
     transform: rotateY(180deg);
     opacity: 0;
+    padding: 10px;
     visibility: hidden;
 }
 
@@ -356,7 +357,7 @@ img.placeholder {
 }
 
 .flip-card.flipped {
-    height: 15rem !important;
+    height: 12rem !important;
 }
 
 .card-services {
