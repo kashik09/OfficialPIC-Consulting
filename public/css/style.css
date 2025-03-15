@@ -187,7 +187,7 @@ img.rounded-carousel {
     color: #9e9e9e6e !important;
 }
 
-.carousel-caption a {
+.carousel-caption a, .contact-caption a {
     color: #9e9e9e6e;
     text-decoration: none;
 }
@@ -432,12 +432,14 @@ img.placeholder {
 }
 
 .contact-caption {
-    margin-top: -2.7rem;
+    margin-top: -2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
-figcaption {
+figcaption.contact-caption {
     font-size: 0.85rem;
-    color: #6c757d;
+    color: #9e9e9e6e !important;
 }
 
 .sm {
