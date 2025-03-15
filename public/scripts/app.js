@@ -1,54 +1,42 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const flipCards = document.querySelectorAll('.flip-card');
+document.addEventListener("DOMContentLoaded", function () {
+    const flipCards = document.querySelectorAll(".flip-card");
+    let activeCard = null; // Keeps track of the currently flipped card
+    let timeoutId = null; // Stores the timeout for auto-flipping
 
-    function adjustHeight(card) {
-        const front = card.querySelector('.flip-card-front');
-        const back = card.querySelector('.flip-card-back');
-        const cardInner = card.querySelector('.flip-card-inner');
+    function flipCard(card) {
+        // If another card is already flipped, flip it back first
+        if (activeCard && activeCard !== card) {
+            activeCard.classList.remove("flipped");
+            clearTimeout(timeoutId); // Cancel the previous timeout
+        }
 
-        // Get current height before flipping
-        const currentHeight = card.offsetHeight;
+        card.classList.toggle("flipped");
 
-        // Temporarily fix the height before changing it
-        card.style.height = `${currentHeight}px`;
-        card.style.transition = 'height 0.5s ease-in-out';
+        if (card.classList.contains("flipped")) {
+            activeCard = card;
 
-        // Allow browser to process height before flipping
-        requestAnimationFrame(() => {
-            card.classList.toggle('flipped');
-
-            // Get new height based on the active side
-            const newHeight = card.classList.contains('flipped') 
-                ? back.scrollHeight 
-                : front.scrollHeight;
-
-            // Only update height if necessary
-            if (newHeight !== currentHeight) {
-                card.style.height = `${newHeight}px`;
-            }
-
-            // Remove fixed height after transition for flexibility
-            setTimeout(() => {
-                card.style.height = 'auto';
-            }, 500);
-        });
+            // Auto flip back after 30 seconds
+            timeoutId = setTimeout(() => {
+                card.classList.remove("flipped");
+                activeCard = null;
+            }, 20000);
+        } else {
+            activeCard = null;
+        }
     }
 
     flipCards.forEach(card => {
-        let flipButtons = card.querySelectorAll('.flip-button');
-
-        flipButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                adjustHeight(card);
-            });
+        card.style.cursor = "pointer"; // Make card clickable
+        card.addEventListener("click", function () {
+            flipCard(card);
         });
     });
 
-    // Adjust height on window resize if necessary
-    window.addEventListener('resize', () => {
+    // Adjust height on window resize
+    window.addEventListener("resize", () => {
         flipCards.forEach(card => {
-            if (card.classList.contains('flipped')) {
-                adjustHeight(card);
+            if (card.classList.contains("flipped")) {
+                flipCard(card);
             }
         });
     });
