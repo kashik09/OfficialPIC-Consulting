@@ -317,6 +317,10 @@ img.placeholder {
     visibility: visible;
 }
 
+.flip-card-front h5 {
+    font-size: 1.37rem !important;
+}
+
 .flip-card-back {
     transform: rotateY(180deg);
     opacity: 0;
