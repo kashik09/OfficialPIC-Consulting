@@ -404,6 +404,12 @@ img.placeholder {
 .contact-section {
     background-color: #0c6ba1;
     text-align: center;
+    width: 70rem;
+    max-width: 90%;
+}
+
+.col-md-11 {
+    width: 68.4rem !important;
 }
 
 .contact-section-header {
