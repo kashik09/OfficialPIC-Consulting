@@ -203,6 +203,29 @@ img.rounded-heroCarousel {
     text-decoration: none;
 }
 
+#logoCarousel {
+    max-width: 70rem;
+}
+
+#logoCarousel .carousel-inner {
+    display: flex;
+    align-items: center;
+}
+
+#logoCarousel .carousel-item {
+    text-align: center;
+}
+
+#logoCarousel .carousel-item .d-flex {
+    gap: 15px;
+}
+
+#logoCarousel .custom-carousel-img {
+    /* max-width: 30%; Makes sure three images fit */
+    height: auto;
+    object-fit: contain;
+}
+
 img.placeholder {
     height: 12rem;
     width: 13rem;
