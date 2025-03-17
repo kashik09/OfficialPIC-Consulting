@@ -186,19 +186,19 @@ img.rounded-heroCarousel {
     min-height: 20rem;
 }
 
-.carousel-caption {
+#heroCarousel .carousel-caption {
     bottom: 0.3125rem;
     font-size: 0.85rem;
     font-weight: 600;
 }
 
-.carousel-caption p {
+#heroCarousel .carousel-caption p {
     margin: 0 !important;
     padding: 0 !important;
     color: #9e9e9e6e !important;
 }
 
-.carousel-caption a, .contact-caption a {
+#heroCarousel .carousel-caption a, .contact-caption a {
     color: #9e9e9e6e;
     text-decoration: none;
 }
