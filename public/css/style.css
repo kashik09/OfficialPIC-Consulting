@@ -330,7 +330,6 @@ img.placeholder {
     align-items: center;
     justify-content: center;
     padding: 15px;
-    border-radius: 10px;
     overflow: hidden;
     transition: opacity 0.3s ease-in-out;
 }
