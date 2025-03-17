@@ -177,14 +177,6 @@ img.rounded-carousel {
     object-fit: contain;
 }
 
-@media (max-width: 768px) {
-    img.rounded-carousel {
-        height: auto;
-        max-height: 17.34rem;
-        object-fit: contain;
-    }
-}
-
 #heroCarousel {
     max-height: 35rem; 
     margin: auto;
