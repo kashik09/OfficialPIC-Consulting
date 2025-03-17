@@ -84,7 +84,7 @@ p {
 }
 
 .offcanvas {
-    background-color: #212529;
+    background-color: rgba(230, 243, 249);
 }
 
 .offcanvas .nav-link {
@@ -110,7 +110,7 @@ p {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.border-bottom {
+.border-bottom, .border-start {
     border-color: #0c6ba1 !important;
 }
 
