@@ -116,9 +116,13 @@ p {
 
 .hero-section {
     margin-top: 1rem;
-    height: 25rem;
+    min-height: auto;
     background-color: #0c6ba1;
     text-align: center;
+    overflow: hidden;
+    padding: 30px 20px 0 20px !important;
+    max-width: 1200px;
+    width: 80%;
 }
 
 .hero-section h1 {
@@ -159,11 +163,28 @@ p {
 
 img.rounded-map {
     width: 35rem;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 img.rounded-carousel {
     height: 17.34rem;
     width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    img.rounded-carousel {
+        height: auto;
+        max-height: 17.34rem;
+        object-fit: contain;
+    }
 }
 
 #heroCarousel {
