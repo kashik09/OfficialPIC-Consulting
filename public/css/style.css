@@ -163,7 +163,6 @@ img.rounded-map {
     max-width: 35rem;
     height: auto;
     max-height: 100%;
-    object-fit: contain;
     display: block;
     margin: auto;
     max-width: 100%;
@@ -174,7 +173,6 @@ img.rounded-heroCarousel {
     max-height: 17.34rem;
     width: auto;
     max-width: 100%;
-    object-fit: contain;
 }
 
 #heroCarousel {
@@ -223,7 +221,6 @@ img.rounded-heroCarousel {
 #logoCarousel .custom-carousel-img {
     /* max-width: 30%; Makes sure three images fit */
     height: auto;
-    object-fit: contain;
 }
 
 img.placeholder {
