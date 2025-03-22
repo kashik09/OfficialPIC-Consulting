@@ -59,7 +59,6 @@ if ('ontouchstart' in window || navigator.maxTouchPoints) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("#contactForm");
     const phoneInputField = document.querySelector("#floatingPhone");
     const emailInput = document.getElementById("floatingEmail");
     const messageInput = document.getElementById("floatingMessage");
