@@ -15,6 +15,8 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+// Serve frontend from public directory
+app.use(express.static(path.join(__dirname, "public")));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
