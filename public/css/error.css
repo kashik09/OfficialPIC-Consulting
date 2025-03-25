@@ -1,5 +1,7 @@
 * {
     user-select: none;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
 }
 
 a, button {
