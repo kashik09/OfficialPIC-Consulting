@@ -10,7 +10,7 @@ a {
 }
 
 body {
-    background-color: #E6F3F9; /* Keep the background color from your main site */
+    background-color: #e6f3f9;
     color: #0c6ba1;
     display: flex;
     flex-direction: column;
