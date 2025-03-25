@@ -2,6 +2,7 @@
     user-select: none;
     font-family: "Ubuntu", sans-serif;
     font-style: normal;
+    font-weight: 400;
 }
 
 a {
@@ -65,15 +66,16 @@ p {
     filter: brightness(1.2);
 }
 
-.navbar .nav-link {
+.navbar a.nav-link {
     font-size: 1.25rem;
-    color: #0c6ba1 !important;
+    color: #0c6ba1;
+    font-weight: 400;
 }    
 
-.navbar .nav-link.active, 
-.navbar .nav-link:hover {
-    color: #92d14f !important;
-    font-weight: bold;
+.navbar a.nav-link.active, 
+.navbar a.nav-link:hover {
+    color: #92d14f;
+    font-weight: 500;
 }    
 
 .navbar-brand img {
@@ -82,15 +84,7 @@ p {
 }
 
 .offcanvas {
-    background-color: rgba(230, 243, 249);
-}
-
-.offcanvas .nav-link {
-    font-weight: 500;
-}
-
-.offcanvas .nav-link.active {
-    font-weight: bold;
+    background-color: #e6f3f9;
 }
 
 .offcanvas .navbar-brand img {
