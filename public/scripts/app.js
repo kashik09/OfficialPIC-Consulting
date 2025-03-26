@@ -112,6 +112,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // });
 });
 
+const form = document.querySelector("form");
+
+form.action = "https://pic-consulting-api.onrender.com/api/submit-form";
+form.method = "POST";
+
 form.addEventListener("submit", (event) => {
     event.preventDefault(); 
 
