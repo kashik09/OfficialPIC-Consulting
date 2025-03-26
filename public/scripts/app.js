@@ -113,30 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const formattedPhone = phoneInput.getNumber(intlTelInputUtils.numberFormat.E164);
-    const formData = new FormData(form);
-    formData.set("floatingPhone", formattedPhone);
-
-    fetch(form.action, {
-        method: form.method,
-        body: JSON.stringify(Object.fromEntries(formData)),
-        headers: { "Content-Type": "application/json" }
-    }).then(response => response.json())
-      .then(data => {
-          if (data.success) {
-              showToast("Thank you! Your form has been submitted successfully.", true);
-              form.reset();
-              localStorage.clear();
-          } else {
-              showToast(data.errors ? data.errors.join("<br>") : "Something went wrong.");
-          }
-      })
-      .catch(() => showToast("Network error. Please try again."));
-});
-
-form.addEventListener("submit", (event) => {
     event.preventDefault(); 
 
     const formattedPhone = phoneInput.getNumber(intlTelInputUtils.numberFormat.E164);
