@@ -64,7 +64,7 @@ const links = document.querySelectorAll('.nav-link');
 links.forEach(link => {
     if (
       link.getAttribute('href') === currentPath ||
-      link.getAttribute('href') === './' ||
+      link.getAttribute('href') === '/' ||
       (currentPath.endsWith('/') && link.getAttribute('href') === currentPath.slice(1))
         ) {
       link.classList.add('active');
