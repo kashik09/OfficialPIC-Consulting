@@ -21,13 +21,8 @@
 
 .navbar a.nav-link.active, 
 .navbar a.nav-link:hover {
-    color: #92d14f;
-    font-weight: 500;
-}
-
-.active {
-    color: #92d14f;
-    font-weight: 500;
+    color: #92d14f !important;
+    font-weight: 500 !important;
 }
 
 .navbar-brand img {
