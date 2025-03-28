@@ -58,19 +58,6 @@ if ('ontouchstart' in window || navigator.maxTouchPoints) {
     }
 }
 
-const currentPath = window.location.pathname;
-const links = document.querySelectorAll('.nav-link');
-
-links.forEach(link => {
-    if (
-      link.getAttribute('href') === currentPath ||
-      link.getAttribute('href') === '/' ||
-      (currentPath.endsWith('/') && link.getAttribute('href') === currentPath.slice(1))
-        ) {
-      link.classList.add('active');
-    }
-  })
-
 document.addEventListener("DOMContentLoaded", function () {
     const phoneInputField = document.querySelector("#floatingPhone");
     const emailInput = document.getElementById("floatingEmail");
