@@ -26,6 +26,10 @@ mongoose.connect(process.env.MONGO_URI, {
 
 app.use("/api", formRoutes);
 
+router.get("/submit-form", (req, res) => {
+    res.send("Hey! This route only works when you submit a form 😊");
+  });  
+
 app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
