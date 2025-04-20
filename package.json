@@ -1,15 +1,11 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "express-validator": "^7.2.1",
-    "mongodb": "^6.13.1",
-    "mongoose": "^7.6.3"
+  "name": "official-pic-consulting",
+  "version": "1.0.0",
+  "description": "Using JSON Server instead of MongoDB",
+  "scripts": {
+    "start:json": "json-server --watch db.json --port 5000"
   },
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "eslint": "^9.21.0",
-    "globals": "^16.0.0"
+    "json-server": "^0.17.4"
   }
 }
