@@ -38,14 +38,14 @@ document.getElementById("contactForm").addEventListener("submit", async function
             method: "POST",
             body: JSON.stringify(jsonData),
             headers: { "Content-Type": "application/json" }
-        });        
+        });
 
         let data = await response.json();
 
         if (!response.ok) {
             showToast(data.errors ? data.errors.join("<br>") : data.message || "Something went wrong.");
         } else {
-            showToast("✅ Thank you! Your form has been submitted successfully.", true); // Show success toast
+            showToast("✅ Thank you! Your form has been submitted successfully.", true);
             setTimeout(() => form.reset(), 1500);
         }        
     } catch (_error) {
