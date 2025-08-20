@@ -1,0 +1,6 @@
+RewriteEngine On
+# Serve existing files directly
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+# Otherwise send everything to index.php
+RewriteRule ^ index.php [QSA,L]
